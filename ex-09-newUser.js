@@ -20,7 +20,20 @@
 
 // ++ YOUR CODE HERE
 
-
+function User(name, role) {
+	this.name = name;
+	this.role = role;
+	this.createdAt = Date.now();
+	this.hasPermissions = function(array) {
+		var flag = false;
+		for (var i = 0; i < array.length; i++) {
+			if (role === array[i]) {
+				flag = true;
+			}
+		}
+		return flag;
+	}
+}
 
 
 

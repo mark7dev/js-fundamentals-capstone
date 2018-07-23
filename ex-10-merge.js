@@ -13,7 +13,19 @@
 
 // ++ YOUR CODE HERE
 
+function merge(object1, object2) {
+	var arrayProperty1 = Object.keys(object1);
+	var arrayProperty2 = Object.keys(object2);
+	var objectMerge = {};
 
+	for (var i = 0; i < arrayProperty1.length; i++) {
+		objectMerge[arrayProperty1[i]] = object1[arrayProperty1[i]];
+	}
+	for (var i = 0; i < arrayProperty2.length; i++) {
+		objectMerge[arrayProperty2[i]] = object2[arrayProperty2[i]];
+	}
+	return objectMerge;
+}
 
 
 
