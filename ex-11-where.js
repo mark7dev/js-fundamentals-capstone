@@ -12,6 +12,27 @@
 
  // ++ YOUR CODE HERE
 
+function where(array, parametro) {
+  var list = [];
+  
+  
+  for (var i = 0; i < array.length; i++) {
+    var current = array[i];
+    var found = true;
+
+    for (var key in parametro) {
+      //Esto itera el objeto, SIEMPRE
+      if(current[key] !== parametro[key]) {
+        found = false;
+
+      }
+    }
+    if(found === true) {
+      list.push(current);
+    }
+  }
+  return list;
+}
 
 
 
